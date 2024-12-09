@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Green Header -->
+    <div class="green-header">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="brand">
+                <h1>PARFUMERIE</h1>
+                <p>Magic Of Your Emotions</p>
+            </div>
+            <div class="user-actions">
+                <span>Xin chào, Khách</span>
+                <!-- Dropdown Menu Icon -->
+                <div class="user-menu">
+                    <i class="fa fa-user-circle user-icon" id="user-icon"></i>
+                    <div class="dropdown" id="dropdown-menu">
+                        <ul>
+                            <li><a href="login.html">Đăng nhập</a></li>
+                            <li><a href="register.html">Đăng ký</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="wishlist"><i class="fa fa-heart"></i></a>
+                <a href="cart.html" class="cart"><i class="fa fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- White Navbar -->
+    <div class="white-navbar">
+        <div class="container">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="introduce.html">Introduction</a></li>
+                <li><a href="#">Brand</a></li>
+                <li><a href="#">Perfume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="images/baner2.jpg" alt="Banner">
+        <div class="banner-content">
+            <h1>Perfume Luxury</h1>
+        </div>
+    </section>
+      <!-- Danh mục nước hoa nam -->
+      <section id="nuoc-hoa-nam">
+        <h2>Nước Hoa Nam</h2>
+        <div class="product-grid">
+            <!-- Sản phẩm -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/1b/6f/8b/1b6f8b6d49af2e5670ab24f2a33d47da.jpg" alt="Giorgio Armani Acqua Di Gio">
+            <h3>Giorgio Armani Acqua Di Gio</h3>
+            <p class="price"data-price="3250000">3.250.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Giorgio Armani Acqua Di Gio" data-price="3250000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/26/db/28/26db28102ea0ecf4aeff571e962b5e6d.jpg" alt="Versace Eros">
+            <h3> Versace Eros</h3>
+            <p class="price" data-prince="10500000">10.500.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Versace Eros" data-price="10500000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/d7/13/da/d713da6b0a4df5d52366bf588a3e5aaf.jpg" alt="Yves Saint Laurent La Nuit De L'Homme EDT">
+            <h3>Yves Saint Laurent La Nuit De L'Homme EDT</h3>
+            <p class="price" data-price="2650000">2.650.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Yves Saint Laurent La Nuit De L'Homme EDT" data-price="2650000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>        
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/31/ff/69/31ff69095dcbf280b6e0212bed2ff1ab.jpg" alt="Dior Sauvage Parfum">
+            <h3>Dior Sauvage Parfum</h3>
+            <p class="price" data-price="5900000">5.900.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Dior Sauvage Parfum" data-price="5900000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/5c/e2/35/5ce23559faf5a4eb35a62138f550b34c.jpg" alt="Bleu De Chanel">
+            <h3>Bleu De Chanel</h3>
+            <p class="price"data-price="4300000">4.300.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Bleu De Chanel" data-price="4300000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/48/aa/bc/48aabc4b6e0aacadc64f74591e7c4ca0.jpg" alt="No. 5 L’Eau">
+            <h3>No. 5 L’Eau</h3>
+            <p class="price"data-price="7800000">7.800.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="No. 5 L’Eau" data-price="7800000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/b0/a1/0f/b0a10fe7867bad47212d33f6d8de8e1b.jpg" alt="Tom Ford Oud Wood EDP">
+            <h3>Tom Ford Oud Wood EDP</h3>
+            <p class="price"data-price="6800000">6.800.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Tom Ford Oud Wood EDP" data-price="6800000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/c8/bb/ef/c8bbef7e01fb5f06ac2a7f9cdaa975ec.jpg" alt="Tears of the Queen">
+            <h3>Tears of the Queen</h3>
+            <p class="price"data-price="7800000">7.800.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Tears of the Queen" data-price="7800000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/6c/de/6e/6cde6e7e6bdd88a2f1381325d1c3f615.jpg" alt="Tom Ford Oud Wood EDP">
+            <h3>Lebeni on the Galaxy</h3>
+            <p class="price"data-price="6800000">6.800.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Lebeni on the Galaxy" data-price="6800000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/46/ea/9f/46ea9fd1c7ca81325d3efaabe3f91718.jpg" alt="Creed Aventus For Men EDP">
+            <h3>Yves Saint Laurent Libre</h3>
+            <p class="price" data-price="9800000">9.800.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Yves Saint Laurent Libre" data-price="9800000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/bc/dc/6c/bcdc6ca60b1a268fb65a35647cc517d6.jpg" alt="Terre DHermes Perfume">
+            <h3>Terre DHermes Perfume</h3>
+            <p class="price"data-price="4800000">4.800.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Terre DHermes Perfume" data-price="4800000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/85/c9/cf/85c9cfb23ae8b3631ea62baafaa478bf.jpg" alt="Elysium Roja Perfume">
+            <h3>Elysium Roja Perfume</h3>
+            <p class="price"data-price="7800000">7.800.000₫</p>
+            <div class="product-actions">
+                <button class="add-to-cart" data-name="Elysium Roja Perfume" data-price="7800000">
+                    <i class="fa fa-cart-plus"></i></button>
+                <button class="view-details"><i class="fa fa-eye"></i></button>
+                <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+            </div>
+        </div>
+
+    </section>
+    <section class="mini-banner">
+        <img src="https://i.pinimg.com/736x/ff/c3/3e/ffc33e5f662fd8c14ef4a170db729b90.jpg" alt="Banner Nhỏ">
+    </section>
+
+
+
+    <section id="nuoc-hoa-nu">
+        <h2>Nước Hoa Nữ</h2>
+        <div class="product-grid">
+            <!-- Sản phẩm 1 -->
+            <div class="product-item">
+                <img src="https://i.pinimg.com/736x/92/0c/bd/920cbdc7cc9c7feeb9bbf3a69522c23e.jpg" alt="Jean Paul Gaultier Scandal">
+                <h3>Jean Paul Gaultier Scandal</h3>
+                <p class="price"data-price="3250000">3.250.000₫</p>
+                <div class="product-actions">
+                    <button class="add-to-cart" data-name="Jean Paul Gaultier Scandal" data-price="3250000">
+                        <i class="fa fa-cart-plus"></i></button>
+                    <button class="view-details"><i class="fa fa-eye"></i></button>
+                    <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <!-- Thêm các sản phẩm khác -->
+            <div class="product-item">
+                <img src="https://i.pinimg.com/736x/36/cb/4a/36cb4ae34e522e195480218a03e7012c.jpg" alt="Miss Dior Parfum">
+                <h3>Miss Dior Parfum</h3>
+                <p class="price" data-price="7800000">7.800.000₫</p>
+                <div class="product-actions">
+                    <button class="add-to-cart" data-name="Miss Dior Parfum" data-price="7800000">
+                        <i class="fa fa-cart-plus"></i></button>
+                    <button class="view-details"><i class="fa fa-eye"></i></button>
+                    <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/736x/04/0c/d0/040cd0ce62fe3a6398dd28079e2baf66.jpg" alt="Parfum Chloe Signature">
+                <h3>Parfum Chloe Signature</h3>
+                <p class="price"data-price="5400000">5.400.000₫</p>
+                <div class="product-actions">
+                    <button class="add-to-cart" data-name="Parfum Chloe Signature" data-price="5400000">
+                        <i class="fa fa-cart-plus"></i></button>
+                    <button class="view-details"><i class="fa fa-eye"></i></button>
+                    <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/736x/df/42/00/df42006f1d2bf1ae43a3466bc9ef8610.jpg" alt="Yves Saint Laurent">
+                <h3>Yves Saint Laurent </h3>
+                <p class="price"data-price="3850000">3.850.000₫</p>
+                <div class="product-actions">
+                    <button class="add-to-cart" data-name="Yves Saint Laurent" data-price="3850000">
+                        <i class="fa fa-cart-plus"></i></button>
+                    <button class="view-details"><i class="fa fa-eye"></i></button>
+                    <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/736x/0e/06/1b/0e061b5f563f05a8ef21b1187ad8fd70.jpg" alt="Chanel Coco Mademoiselle">
+                <h3>Chanel Coco Mademoiselle </h3>
+                <p class="price"data-price="200000">2.000.000₫</p>
+                <div class="product-actions">
+                    <button class="add-to-cart" data-name="Chanel Coco Mademoiselle EDP" data-price="2000000">
+                        <i class="fa fa-cart-plus"></i></button>
+                    <button class="view-details"><i class="fa fa-eye"></i></button>
+                    <button class="add-to-wishlist"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="cart.js"></script>
+</body>
+</html>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Thông tin chính -->
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <p>Chúng tôi cung cấp các loại nước hoa cao cấp đến từ các thương hiệu nổi tiếng trên thế giới. Hãy để hương thơm khẳng định cá tính của bạn.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="introduce.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <p><i class="fa fa-phone"></i> Hotline: 1900 123 456</p>
+                    <p><i class="fa fa-envelope"></i> Email: support@parfumerie.com</p>
+                    <p><i class="fa fa-map-marker"></i> Address: 123 Perfume Street, HCM City</p>
+                </div>
+                <div class="footer-section social">
+                    <h2>Follow Us</h2>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+        </div>
+    </footer>

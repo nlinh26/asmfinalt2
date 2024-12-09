@@ -1,0 +1,106 @@
+/* RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9; /* Màu nền nhạt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* FORM CONTAINER */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* HEADING */
+.form-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #004d40; /* Màu xanh đậm */
+}
+
+/* FORM */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00796b; /* Màu xanh đậm */
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.3);
+}
+
+/* BUTTON */
+button {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00796b; /* Màu xanh nhạt hơn khi hover */
+}
+
+/* LINKS */
+.register-link,
+.login-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register-link a,
+.login-link a {
+    color: #004d40;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover,
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+    }
+}

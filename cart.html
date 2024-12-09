@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Your cart</h1>
+    
+    <!-- Nút quay lại -->
+    <button id="back-button">Home Back</button>
+
+    <div id="cart-items"></div>
+    <div id="cart-total"></div>
+    <button id="checkout">Páy</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const cartItemsContainer = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+            
+            // Hiển thị sản phẩm trong giỏ hàng
+            function renderCartItems() {
+                cartItemsContainer.innerHTML = "";
+                cart.forEach((item, index) => {
+                    const itemElement = document.createElement("div");
+                    itemElement.classList.add("cart-item");
+                    itemElement.innerHTML = `
+                        <div class="cart-item-info">
+                            <span>${item.name}</span>
+                            <span>${item.price.toLocaleString()}₫</span>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <button class="decrease" data-index="${index}">-</button>
+                            <span>${item.quantity}</span>
+                            <button class="increase" data-index="${index}">+</button>
+                        </div>
+                        <button class="remove" data-index="${index}">Xóa</button>
+                    `;
+                    cartItemsContainer.appendChild(itemElement);
+                });
+
+                // Tính tổng giá trị giỏ hàng
+                const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                cartTotal.innerHTML = `Tổng cộng: ${total.toLocaleString()}₫`;
+            }
+
+            // Nút "Quay lại"
+            const backButton = document.getElementById("back-button");
+            backButton.addEventListener("click", function() {
+                window.history.back(); // Quay lại trang trước đó
+            });
+
+            // Xử lý thanh toán
+            const checkoutButton = document.getElementById("checkout");
+            checkoutButton.addEventListener("click", function() {
+                alert("Bạn đã thanh toán thành công!");
+                localStorage.removeItem("cart");
+                renderCartItems(); // Làm mới giỏ hàng
+            });
+
+            // Tăng số lượng sản phẩm
+            cartItemsContainer.addEventListener("click", function(event) {
+                if (event.target.classList.contains("increase")) {
+                    const index = event.target.getAttribute("data-index");
+                    cart[index].quantity++;
+                    updateCart();
+                }
+            });
+
+            // Giảm số lượng sản phẩm
+            cartItemsContainer.addEventListener("click", function(event) {
+                if (event.target.classList.contains("decrease")) {
+                    const index = event.target.getAttribute("data-index");
+                    if (cart[index].quantity > 1) {
+                        cart[index].quantity--;
+                        updateCart();
+                    }
+                }
+            });
+
+            // Xóa sản phẩm khỏi giỏ hàng
+            cartItemsContainer.addEventListener("click", function(event) {
+                if (event.target.classList.contains("remove")) {
+                    const index = event.target.getAttribute("data-index");
+                    cart.splice(index, 1);
+                    updateCart();
+                }
+            });
+
+            // Cập nhật lại giỏ hàng và lưu vào localStorage
+            function updateCart() {
+                localStorage.setItem("cart", JSON.stringify(cart));
+                renderCartItems(); // Làm mới giỏ hàng sau mỗi thay đổi
+            }
+
+            // Hiển thị giỏ hàng ngay khi trang được tải
+            renderCartItems();
+        });
+    </script>
+</body>
+</html>
